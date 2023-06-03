@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: HelveticaNowDisplay;
+    src: url(../fonts/HelveticaNowDisplay/HelveticaNowDisplay-Regular.otf);
+}
+
+section {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    padding: 118px 96px;
+}
+
+section .left h3 {
+    font-family: HelveticaNowDisplay;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+}
+
+section .right .accordion-item {
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+section .right .accordion-item .accordion-header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid black;
+}
+
+section .right .accordion-item .accordion-body {
+    display: none;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0px 20px 20px;
+    background-color: black;
+    border-bottom-left-radius: 24px !important;
+    border-bottom-right-radius: 24px !important;
+    gap: 7px;
+}
+section .right .accordion-item .accordion-body h5{
+    font-size: 1.3rem;
+}
+
+section .right .accordion-item .accordion-header button {
+    background-color: transparent;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    outline: none;
+    max-width: 90%;
+    line-height: 72px;
+    padding: 20px 20px 20px 0px;
+    position: relative;
+    text-align: left;
+    white-space: inherit;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+}
+
+.accordion-header .icon::after {
+    content: "";
+    background-image: url(https://jewitdev.wpengine.com/wp-content/uploads/2023/05/right-arrow.svg);
+    width: 1.25rem;
+    height: 1.25rem;
+    padding-right: 40px;
+    background-repeat: no-repeat;
+    background-size: 1.25rem;
+    height: 1.25rem;
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+.accordion-item * {
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+}
+
+section .right .accordion-item .accordion-header i {
+    position: absolute;
+    right: 20px;
+}
+
+section .right .accordion-item .accordion-header:hover {
+    background-color: black;
+}
+
+section .right .accordion-item .accordion-header:hover button {
+    padding: 20px;
+    color: #fff;
+}
+
+section .right .accordion-item .accordion-header:hover>.icon::after {
+    background-image: url(https://jewitdev.wpengine.com/wp-content/uploads/2023/05/right-arrow-white.svg);
+}
+
+section .right .accordion-item .accordion-header:hover i {
+    color: #fff;
+}
+
+button:focus:not(:focus-visible) {
+    outline: 0;
+}
+
+/* show */
+
+.show .accordion-header {
+    background: #000 !important;
+    color: #fff !important;
+    padding-left: 20px !important;
+    box-shadow: none;
+    border: none;
+    border-top-left-radius: 24px !important;
+    border-top-right-radius: 24px !important;
+    overflow: hidden;
+}
+
+.show .accordion-header button {
+    padding: 20px 20px 20px 0px !important;
+    padding-bottom: 20px !important;
+    color: #fff;
+    border: none;
+}
+
+.show .accordion-body {
+    display: grid !important;
+}
+
+.show .accordion-body h5 {
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff;
+    margin: 0;
+    line-height: 27px;
+}
+
+.show .icon::after {
+    background-image: url(https://jewitdev.wpengine.com/wp-content/uploads/2023/05/down-arrow-white.svg) !important;
+}
